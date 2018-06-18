@@ -2,7 +2,7 @@
 
 [Webpack v4](https://webpack.js.org/)
 
-##### Includes
+## Includes
 
 * [dev-server](https://github.com/webpack/webpack-dev-server)
 * [HtmlWebPackPlugin](https://github.com/jantimon/html-webpack-plugin)
