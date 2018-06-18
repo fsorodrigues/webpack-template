@@ -30,4 +30,4 @@ Runs `localhost:(port)` on `--mode dev`
 ```
 npm run build
 ```
-Creates `index.html`, `bundle.js`, and `[name].css` files
+Creates `index.html`, `bundle.js`, and `[name].css` files on `--mode prod`
