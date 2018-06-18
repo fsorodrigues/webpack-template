@@ -11,20 +11,23 @@
 
 * [d3.js v5](https://github.com/d3/d3/blob/master/API.md)
 
-## Initialize project with to install `dev` e `prod` dependencies listed in `package.json`
+## Initialize project
 
 ```
 npm install
 ```
+Installs `dev` e `prod` dependencies listed in `package.json`
 
-## Run live server
+## Start live server
 
 ```
 npm run start
 ```
+Runs `localhost:(port)` on `--mode dev`
 
 ## Build project
 
 ```
 npm run build
 ```
+Creates `index.html`, `bundle.js`, and `[name].css` files
