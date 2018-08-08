@@ -1,6 +1,13 @@
 const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
+const paths = {
+    src: path.join(__dirname, 'src'),
+    dist: path.join(__dirname, 'dist'),
+    data: path.join(__dirname, 'src/data')
+};
 
 module.exports = {
     entry: {
@@ -8,7 +15,7 @@ module.exports = {
     },
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        path: paths.dist
     },
     module:{
         rules:[
@@ -53,6 +60,11 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "[name].css",
             chunkFilename: "[id].css"
-        })
+        }),
+        new CopyWebpackPlugin([{
+            from: paths.data,
+            to: paths.dist + '/data'
+            }
+        ])
     ]
 };
